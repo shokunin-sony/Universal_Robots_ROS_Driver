@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="robot_name" default="robot" />
+  <arg name="gripper_type" default="gripper" />
+  <arg name="finger_type" default="finger" />
+
   <arg name="debug" default="false" doc="Debug flag that will get passed on to ur_control.launch"/>
   <arg name="use_tool_communication" doc="On e-Series robots tool communication can be enabled with this argument"/>
   <arg name="controller_config_file" doc="Config file used for defining the ROS-Control controllers."/>
@@ -27,12 +31,16 @@
   <!-- robot model -->
   <include file="$(arg robot_description_file)">
     <arg name="kinematics_params" value="$(arg kinematics_config)"/>
+    <arg name="robot_name" value="$(arg robot_name)" />
+    <arg name="gripper_type" value="$(arg gripper_type)" />
+    <arg name="finger_type" value="$(arg finger_type)" />
   </include>
 
   <!-- Convert joint states to /tf tranforms -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
   <include file="$(find ur_robot_driver)/launch/ur_control.launch">
+    <arg name="ns" value="$(arg robot_name)_robot"/>
     <arg name="debug" value="$(arg debug)"/>
     <arg name="use_tool_communication" value="$(arg use_tool_communication)"/>
     <arg name="controller_config_file" value="$(arg controller_config_file)"/>
