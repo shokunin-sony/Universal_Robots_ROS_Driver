@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <launch>
 
+  <arg name="ns" default="robot" />
+
   <!-- GDB functionality -->
   <arg name="debug" default="false" doc="If set to true, will start the driver inside gdb" />
   <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -71,7 +73,7 @@
   </node>
 
   <!-- Load controller settings -->
-  <rosparam file="$(arg controller_config_file)" command="load"/>
+  <rosparam file="$(arg controller_config_file)" command="load" subst_value="true"/>
 
   <!-- spawn controller manager -->
   <node name="ros_control_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
