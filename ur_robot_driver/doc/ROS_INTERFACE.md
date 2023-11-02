@@ -41,10 +41,6 @@ Use the description in limited mode (Every axis rotates from -PI to PI)
 
 Port that will be opened by the driver to allow direct communication between the driver and the robot controller.
 
-##### robot_description_file (default: "$(find ur_description)/launch/load_ur3e.launch")
-
-Robot description launch file.
-
 ##### robot_ip (Required)
 
 IP address by which the robot can be reached.
@@ -145,10 +141,6 @@ Use the description in limited mode (Every axis rotates from -PI to PI)
 ##### reverse_port (default: "50001")
 
 Port that will be opened by the driver to allow direct communication between the driver and the robot controller.
-
-##### robot_description_file (default: "$(find ur_description)/launch/load_ur10.launch")
-
-Robot description launch file.
 
 ##### robot_ip (Required)
 
@@ -312,10 +304,6 @@ Use the description in limited mode (Every axis rotates from -PI to PI)
 
 Port that will be opened by the driver to allow direct communication between the driver and the robot controller.
 
-##### robot_description_file (Required)
-
-Robot description launch file.
-
 ##### robot_ip (Required)
 
 IP address by which the robot can be reached.
@@ -409,10 +397,6 @@ Use the description in limited mode (Every axis rotates from -PI to PI)
 
 Port that will be opened by the driver to allow direct communication between the driver and the robot controller.
 
-##### robot_description_file (default: "$(find ur_description)/launch/load_ur5.launch")
-
-Robot description launch file.
-
 ##### robot_ip (Required)
 
 IP address by which the robot can be reached.
@@ -469,10 +453,6 @@ Use the description in limited mode (Every axis rotates from -PI to PI)
 ##### reverse_port (default: "50001")
 
 Port that will be opened by the driver to allow direct communication between the driver and the robot controller.
-
-##### robot_description_file (default: "$(find ur_description)/launch/load_ur5e.launch")
-
-Robot description launch file.
 
 ##### robot_ip (Required)
 
@@ -567,10 +547,6 @@ Use the description in limited mode (Every axis rotates from -PI to PI)
 
 Port that will be opened by the driver to allow direct communication between the driver and the robot controller.
 
-##### robot_description_file (default: "$(find ur_description)/launch/load_ur3.launch")
-
-Robot description launch file.
-
 ##### robot_ip (Required)
 
 IP address by which the robot can be reached.
@@ -627,10 +603,6 @@ Use the description in limited mode (Every axis rotates from -PI to PI)
 ##### reverse_port (default: "50001")
 
 Port that will be opened by the driver to allow direct communication between the driver and the robot controller.
-
-##### robot_description_file (default: "$(find ur_description)/launch/load_ur10e.launch")
-
-Robot description launch file.
 
 ##### robot_ip (Required)
 
